@@ -45,7 +45,6 @@ from __future__ import print_function
 import scipy.spatial.distance as dist
 from scipy import spatial
 import math
-from IPython.display import clear_output
 import numpy as np
 
 class SwapOptimizer:
@@ -136,12 +135,6 @@ class SwapOptimizer:
         toleranceSteps = 0
 
         for i in range(iterations):
-            if i>0 and i % 20000 == 0:
-                clear_output(wait=True)
-                print("Starting sum of distances",startingQuality)
-            if i % 1000 == 0:
-                print(i,bestQuality)
-
             if toleranceSteps == 0:
                 swapTable = bestSwapTableBeforeAnnealing.copy()
                 chosenToleranceSteps = toleranceSteps = np.random.choice(toleranceChoices,p=toleranceWeights/np.sum(toleranceWeights))

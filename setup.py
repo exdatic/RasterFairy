@@ -64,9 +64,7 @@ setup(
     # https://packaging.python.org/en/latest/requirements.html
     install_requires=[
         'numpy >= 1.8.0',
-        'scipy >= 0.13.0',
-        'moviepy >= 0.2.3.5',
-        'ipython',
+        'scipy >= 0.13.0'
     ],
 
     # List additional groups of dependencies here (e.g. development
@@ -76,6 +74,7 @@ setup(
     extras_require={
         'dev': ['check-manifest'],
         'test': ['coverage'],
+        'all': ['moviepy >= 0.2.3.5']
     },
 
     # If there are data files included in your packages that need to be
